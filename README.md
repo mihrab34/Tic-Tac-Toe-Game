@@ -1,18 +1,5 @@
 # Tic-Tac-Toe-Game
 
-Ruby enumerables Implementation
-
-**Built With**
-
-   * Ruby
-   * Vscode
-   * Rubocop
-
-**Author**
-
-   * Github: @mihrab34
-   * Twitter: @RamatAkintola
-
 **Contributions**
 
 Any contributions are **greatly appreciated**
