@@ -1,6 +1,5 @@
 # Tic-Tac-Toe-Game
 
-**Contributions**
 
 Any contributions are **greatly appreciated**
 
