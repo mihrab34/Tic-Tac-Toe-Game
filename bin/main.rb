@@ -1,31 +1,33 @@
 #!/usr/bin/env ruby
 
-# Game Logic
+def welcome
 
-puts "Welcome to Tic Tac Toe!"
-display_board
-puts "What move would X like to make (1-9)?"
-player_x = player_input(5)
+    puts "Welcome to Tic Tac Toe!"
+    puts '-------------INSTRUCTIONS---------------'
+    puts 'The first player is X'
+    puts 'Choose numbers from 1 to 9 to select desired cell'
+    puts '--------------------------------'
+end
 
+# Request for player names and chip and save them into variables
+puts 'Player 1 please enter your name: '
+player_1 = gets.chomp
 
-# Methods
+puts 'Player 2 please enter your name: '
+player_2 = gets.chomp
+
+print " #{player_1}, do you choose X or O ?"
+chip_one = gets.chomp.to_s
+chip_two = chip_one == 'X'? 'O' : 'X' 
 
 def display_board
 
-    puts "   |   |   "
-    puts "-----------"
-    puts "   |   |   "
-    puts "-----------"
-    puts "   |   |   "
+    puts '  1 | 2  | 3  '
+    puts ' ------------ '
+    puts '  4 |  5 | 6  ' 
+    puts ' ------------ '
+    puts '  7 |  8 | 9  '
 end
 
-def player_input(input)
-
-    player = gets.chomp.to_i
-end
-
-board = []
-def player_move(array, index, value = "X")
-
-    array[index] = value
-end
+welcome
+display_board
