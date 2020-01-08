@@ -15,12 +15,13 @@ end
 puts "What move would X like to make (1-9)?"
 puts
 
-board = []
 def player_input(input)
 
     player = gets.chomp.to_i
 end
 
+board = []
 def player_move(array, index, value = "X")
 
+    array[index] = value
 end
