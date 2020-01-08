@@ -1,7 +1,14 @@
 #!/usr/bin/env ruby
 
+# Game Logic
+
 puts "Welcome to Tic Tac Toe!"
-puts
+display_board
+puts "What move would X like to make (1-9)?"
+player_x = player_input(5)
+
+
+# Methods
 
 def display_board
 
@@ -11,9 +18,6 @@ def display_board
     puts "-----------"
     puts "   |   |   "
 end
-
-puts "What move would X like to make (1-9)?"
-puts
 
 def player_input(input)
 
