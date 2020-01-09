@@ -53,3 +53,13 @@ puts '  7 |  8 | 9  '
 
 # Players continue to play until a winner emerges
 
+# Winner Comments
+
+puts "#{player_1} has won"
+
+puts "#{player_2} has won"
+
+puts "It's a draw."
+
+puts "Thank you for playing."
+
