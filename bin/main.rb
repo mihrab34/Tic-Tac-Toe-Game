@@ -42,6 +42,17 @@ puts '  4 |  X | 6  '
 puts ' ------------ '
 puts '  7 |  8 | 9  '
 
+move = gets.chomp
+  status_game = move_game
+  # Calling move_game(move) method to check if the move is valid
+
+  if status_game # status game is true when there is an error
+    puts 'ERROR your move is invalid' # We inform that there is an error and ask again for the position.
+    next # We keep the same turn,skipping the rest of the code and asking again for the position.
+  else
+    puts 'Next turn' # We let the loop continue and change the turn
+  end
+
 puts "#{player_2} choose a number to select desired cell"
 player_2_choice = gets.chomp
 puts
@@ -51,7 +62,28 @@ puts '  4 |  X | 6  '
 puts ' ------------ '
 puts '  7 |  8 | 9  '
 
+move = gets.chomp
+  status_game = move_game
+  # Calling move_game(move) method to check if the move is valid
+
+  if status_game # status game is true when there is an error
+    puts 'ERROR your move is invalid' # We inform that there is an error and ask again for the position.
+    next # We keep the same turn,skipping the rest of the code and asking again for the position.
+  else
+    puts 'Next turn' # We let the loop continue and change the turn
+  end
+
 # Players continue to play until a winner emerges
+
+#During the game
+
+game_on = true
+while game_on
+  #performs repetitive render
+  if winner # and/or draw 
+    game_on = false
+  end
+end
 
 # Winner Comments
 
