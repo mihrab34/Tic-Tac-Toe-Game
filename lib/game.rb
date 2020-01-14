@@ -1,3 +1,5 @@
+require_relative 'player.rb'
+
 class Game
     attr_accessory :total_turns
 

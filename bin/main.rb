@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+require_relative '../lib/player.rb'
+require_relative '../lib/game.rb'
+
 # Welcome Message
 
 puts "Welcome to Tic Tac Toe!"
