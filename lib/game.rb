@@ -1,11 +1,12 @@
 class Game
     attr_accessory :total_turns
 
-    def initialize(player1 = Player.new('X'), player2 = Player.new('O'))
+    def initialize(player1 = Player.new('X'), player2 = Player.new('O'), board = (1..9).to_a)
         @player = {
             x: player1,
             o: player2
         }
+        @board = board
         reset_game
     end
 
