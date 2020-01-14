@@ -21,7 +21,7 @@ puts 'Hello welcome to the Tic Tac Toe Game'
 player1 = Player.new('X', asking_names('X'))
 player2 = Player.new('O', asking_names('O'))
 puts '--------------------------------------'
-puts 'This our board'
+puts 'Board displayed'
 
 game = Game.new(player1, player2)
 

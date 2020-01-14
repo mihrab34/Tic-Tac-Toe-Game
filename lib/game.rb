@@ -1,7 +1,7 @@
 require_relative 'player.rb'
 
 class Game
-    attr_accessory :total_turns
+    attr_accessor :total_turns
 
     def initialize(player1 = Player.new('X'), player2 = Player.new('O'), board = (1..9).to_a)
         @player = {
