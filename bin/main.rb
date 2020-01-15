@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+require_relative '../lib/player.rb'
+require_relative '../lib/game.rb'
+
 # Welcome Message
 
 puts "Welcome to Tic Tac Toe!"
@@ -8,90 +11,52 @@ puts 'Choose numbers from 1 to 9 to select desired cell'
 puts 'Whoever gets a straight line first wins'
 puts '--------------------------------'
 
-# Request for player names and chip and save them into variables
-
-puts 'Player 1 please enter your name: '
-player_1 = gets.chomp
-
-puts 'Player 2 please enter your name: '
-player_2 = gets.chomp
-
-print " #{player_1}, do you choose X or O ? "
-chip_one = gets.chomp.to_s
-puts "#{player_1} choose #{chip_one} "
-chip_two = chip_one == 'X'? 'O' : 'X'
-puts "#{player_2} choose #{chip_two}\n\n"
-
-puts 'START'
-
-# Display Board to Players
-puts
-puts '  1 | 2  | 3  '
-puts ' ------------ '
-puts '  4 |  5 | 6  ' 
-puts ' ------------ '
-puts '  7 |  8 | 9  '
-
-# Players choose a desired cell number
-puts "#{player_1} choose a number to select desired cell"
-player_1_choice = gets.chomp
-puts
-puts '  1 | 2  | 3  '
-puts ' ------------ '
-puts '  4 |  X | 6  ' 
-puts ' ------------ '
-puts '  7 |  8 | 9  '
-
-move = gets.chomp
-  status_game = move_game
-  # Calling move_game(move) method to check if the move is valid
-
-  if status_game # status game is true when there is an error
-    puts 'ERROR your move is invalid' # We inform that there is an error and ask again for the position.
-    next # We keep the same turn,skipping the rest of the code and asking again for the position.
-  else
-    puts 'Next turn' # We let the loop continue and change the turn
-  end
-
-puts "#{player_2} choose a number to select desired cell"
-player_2_choice = gets.chomp
-puts
-puts '  1 | 2  | O  '
-puts ' ------------ '
-puts '  4 |  X | 6  ' 
-puts ' ------------ '
-puts '  7 |  8 | 9  '
-
-move = gets.chomp
-  status_game = move_game
-  # Calling move_game(move) method to check if the move is valid
-
-  if status_game # status game is true when there is an error
-    puts 'ERROR your move is invalid' # We inform that there is an error and ask again for the position.
-    next # We keep the same turn,skipping the rest of the code and asking again for the position.
-  else
-    puts 'Next turn' # We let the loop continue and change the turn
-  end
-
-# Players continue to play until a winner emerges
-
-#During the game
-
-game_on = true
-while game_on
-  #performs repetitive render
-  if winner # and/or draw 
-    game_on = false
-  end
+def asking_names(turn)
+  puts "What is your name (Turn #{turn})?"
+  name = gets.chomp
+  name
 end
 
-# Winner Comments
+puts 'Hello welcome to the Tic Tac Toe Game'
+player1 = Player.new('X', asking_names('X'))
+player2 = Player.new('O', asking_names('O'))
+puts '--------------------------------------'
+puts 'Board displayed'
 
-puts "#{player_1} has won"
+game = Game.new(player1, player2)
 
-puts "#{player_2} has won"
+puts game.show_board
 
-puts "It's a draw."
+flag = true
+while flag
+  flag = false
+  while game.total_turns.positive?
+    puts "#{game.current_turn == 'X' ? player1.name : player2.name} pick a number to set the turn '#{game.current_turn}' "
+    position = gets.chomp
+    puts '--------------------------------------'
 
-puts "Thank you for playing."
+    invalid_p = game.invalid_position(position.to_i)
+    status_game = invalid_p || game.move_game(position.to_i)
 
+    if status_game
+      puts status_game
+    else
+      puts 'Next turn'
+    end
+
+    puts '--------------------------------------'
+    puts game.show_board
+  end
+
+  puts ''
+  puts 'Do you want to play again? (y/n):'
+  answer = gets.chomp
+  if answer.downcase == 'y'
+    flag = true
+    game.reset_game
+    puts '--------------------------------------'
+    puts game.show_board
+  else
+    puts 'Thanks for playing'
+  end
+end
