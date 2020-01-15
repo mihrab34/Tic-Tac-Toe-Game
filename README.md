@@ -1,5 +1,18 @@
 # Tic-Tac-Toe-Game
 
+This project is a part of [Microverse](https://www.microverse.org/) Ruby Curriculum
+
+Table of Content
+
+======
+
+* About the Project
+  * Built With
+* Usage Instruction
+* Game Rules
+* Authors
+* Contribution
+* Acknowledgements
 
 Any contributions are **greatly appreciated**
 
