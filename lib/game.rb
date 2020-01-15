@@ -36,7 +36,7 @@ class Game
 
     end
 
-    def move_game 
+    def move_game(position) 
         @board[position - 1] = current_turn
         @turn_x = !@turn_x
         @total_turns -= 1
