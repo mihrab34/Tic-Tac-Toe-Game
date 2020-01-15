@@ -6,22 +6,21 @@ This project is a part of [Microverse](https://www.microverse.org/) Ruby Curricu
 
 
 
-* [About the Project](#about-the-project)
-  * [Built With](https://github.com/mihrab34/Tic-Tac-Toe-Game#built-with)
-* [Usage Instruction](https://github.com/mihrab34/Tic-Tac-Toe-Game#usage-instruction)
-* [Game Rules](https://github.com/mihrab34/Tic-Tac-Toe-Game#game-rules)
-* [Authors](https://github.com/mihrab34/Tic-Tac-Toe-Game#authors)
-* [Contribution](https://github.com/mihrab34/Tic-Tac-Toe-Game#contribution)
-* [Acknowledgements](https://github.com/mihrab34/Tic-Tac-Toe-Game#acknowledgements)
+* [About the Project](https://github.com/mihrab34/Tic-Tac-Toe-Game/blob/development/README.md#about-the-project)
+  * [Built With](https://github.com/mihrab34/Tic-Tac-Toe-Game/blob/development/README.md#built-with)
+* [Usage Instruction](https://github.com/mihrab34/Tic-Tac-Toe-Game/blob/development/README.md#usage-instruction)
+* [Game Rules](https://github.com/mihrab34/Tic-Tac-Toe-Game/blob/development/README.md#game-rules)
+* [Authors](https://github.com/mihrab34/Tic-Tac-Toe-Game/blob/development/README.md#authors)
+* [Contribution](https://github.com/mihrab34/Tic-Tac-Toe-Game/blob/development/README.md#contribution)
 
-**ABOUT THE PROJECT**
+**[ABOUT THE PROJECT]**(https://github.com/mihrab34/Tic-Tac-Toe-Game/blob/development/README.md#about-the-project)
 
 * The objective is to build a tic-tac-toe game on the command line where two human players can play against each other      and the board is displayed in between turns.
 * The project was completed using Ruby language.
 * Original project specification at [The Odin Project](https://www.theodinproject.com/courses/ruby-programming/lessons/oop)
 * Tic-Tac-Toe From [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe) for more details about Tic-Tac-Toe.
 
-**Built With**
+**BUILT WITH**
 
 This project was built using these technologies.
 
@@ -29,19 +28,19 @@ This project was built using these technologies.
 * Rubocop
 * VsCode
 
-**Usage Instructions**
+**USAGE INSTRUCTIONS**
 
 * Clone the repository and run the app.
 
 ~~~~
 
-$ git clone git@github.com:mihrab34/tic_tac_toe.git
+$ git clone git@github.com:mihrab34/Tic_Tac_Toe-Game.git
 $ cd  Tic_Tac_Toe
 $ ruby bin/main.rb
 
 ~~~~
 
-**Game Rules**
+**GAME RULES**
 
 1. The game accepts only integers from 1 to 9.
 2. It starts on player X's turn.
@@ -121,11 +120,13 @@ It's a draw
 ==== GAME END ====
 ~~~~
 
-**Authors**
+**AUTHORS**
+
 [mihrab34](https://github.com/mihrab34)
+
 [babs257](https://github.com/babs257)
 
-**Contributions**
+**CONTRIBUTIONS**
 
 Any contributions are **greatly appreciated**
 
