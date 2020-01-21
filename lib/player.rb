@@ -1,7 +1,8 @@
 class Player
 
     attr_reader  :name
-    def initialize(name = nil)
+    def initialize(turn, name = nil)
+        @turn = turn
         @name = name
-    end
+        @name = 'Player ' + @turn if name.nil? || name.length < 2
 end
