@@ -5,4 +5,5 @@ class Player
         @turn = turn
         @name = name
         @name = 'Player ' + @turn if name.nil? || name.length < 2
+    end
 end
