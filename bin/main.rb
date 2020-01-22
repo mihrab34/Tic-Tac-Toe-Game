@@ -17,9 +17,8 @@ def asking_names(turn)
   name
 end
 
-puts 'Hello welcome to the Tic Tac Toe Game'
-player1 = Player.new('X', asking_names('X'))
-player2 = Player.new('O', asking_names('O'))
+player1 = Player.new( asking_names('X'))
+player2 = Player.new( asking_names('O'))
 puts '--------------------------------------'
 puts 'Board displayed'
 
